@@ -1,0 +1,13 @@
+# An inode is an index node. 
+# It serves as a unique identifier for a specific piece of metadata on a given filesystem, and the disk block location of this object.
+
+#Get file system information
+df /dev/vda1
+
+#Get inodes
+df -i /dev/vda1
+
+#Get blocksize in the filesystem
+blockdev --getbsz /dev/vda
+
+df -B 4096 /dev/vda1
